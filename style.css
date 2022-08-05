@@ -150,3 +150,22 @@ nav a:hover {
 .social-icons i {
   padding: 5px 15px;
 }
+
+/* CYF Blocks CSS */
+button {
+  margin: 15px;
+}
+.quotes-section img {
+  width: 500px; 
+  height: auto;
+  margin: 20px;
+}
+.button-section {
+  display:flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.main {
+  text-align: center;
+}
+      
