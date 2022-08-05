@@ -1,0 +1,152 @@
+:root {
+  --overlay: white;
+  --overlay-font: "Poppins", sans-serif;
+  --para-font: "Poppins", sans-serif;
+  --heading-font: "Space Mono", monospace;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+
+nav {
+  text-align: right;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+.big-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.container {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  background-image: url("https://images3.alphacoders.com/574/57477.jpg");
+  background-size: cover;
+}
+
+.overlay-text h1 {
+  font-size: 8rem;
+  text-decoration: underline;
+  font-weight: heavy;
+  font-family: var(--overlay-font);
+  color: var(--overlay);
+  position: absolute;
+  bottom: 25%;
+  padding: 5px;
+}
+
+.overlay-text p {
+  width: 75%;
+  font-size: 0.9em;
+  font-family: var(--para-font);
+  color: var(--overlay);
+  position: absolute;
+  bottom: 25%;
+  padding: 5px;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+main h2 {
+  font-family: var(--heading-font);
+  text-align: center;
+}
+
+main p {
+  font-family: var(--para-font);
+  font-size: 1em;
+  text-align: justify;
+}
+
+/* interests images */
+.hero-section {
+  margin: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 30%;
+  display: inline-block; /* shrink wrap to image */
+  overflow: hidden; /* this is to keep the excess in the container. removing it means it'll zoom in and spill outside the container */
+}
+
+.box img {
+  width: 100%;
+  display: block; /* no whitespace */
+  transition: 0.3s ease-in-out;
+}
+
+.box:hover img {
+  transform: scale(1.05);
+}
+
+.video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  margin-top: 25px;
+}
+
+.white-rabbit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.styled-break {
+  width: 700px;
+  height: 1px;
+  margin: auto;
+  background-color: black;
+}
+
+footer {
+  font-family: var(--heading-font);
+  text-align: center;
+  padding: 20px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+nav a:hover {
+  color: #e06566;
+}
+
+.social-icons i {
+  padding: 5px 15px;
+}
