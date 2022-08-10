@@ -40,3 +40,72 @@ let element_image_carousel2 = document.getElementById('image-carousel');
 element_image_carousel2.setAttribute("src", images[0]);
 let element_description2 = document.getElementById('description');
 element_description2.innerText = randomMember(descriptions);
+
+// Comments Section Start
+
+var comments, comment, author;
+
+function getNumberOrString(value) {
+  // Convert a string value to a number if possible
+  let number_value = Number(value);
+  if (Number.isNaN(number_value)) {
+    return value
+  } else {
+    return number_value
+  }
+}
+
+// Describe this function...
+function checkAuthor() {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  if (author == 0) {
+    comments.forEach((comment) => {
+      let element_comment_list = document.getElementById('comment-list');
+      let new_li = document.createElement('li');
+      new_li.innerText = comments.shift();
+      let new_div = document.createElement('div');
+      let new_span = document.createElement('span');
+      new_span.innerText = ' - from Anonymous';
+
+      new_div.appendChild(new_span);
+
+      new_li.appendChild(new_div);
+
+      element_comment_list.appendChild(new_li);
+    });
+  } else {
+    comments.forEach((comment) => {
+      let element_comment_list2 = document.getElementById('comment-list');
+      let new_li2 = document.createElement('li');
+      new_li2.innerText = comments.shift();
+      let new_div2 = document.createElement('div');
+      let new_span2 = document.createElement('span');
+      new_span2.innerText = ' - ';
+
+      new_div2.appendChild(new_span2);
+      let new_span3 = document.createElement('span');
+      author = getNumberOrString(document.getElementById('comment-author').value);
+      new_span3.innerText = author;
+
+      new_div2.appendChild(new_span3);
+
+      new_li2.appendChild(new_div2);
+
+      element_comment_list2.appendChild(new_li2);
+    });
+  }
+}
+
+
+comments = [];
+
+
+document.getElementById('comment-button').addEventListener('click', (event) => {
+  comment = getNumberOrString(document.getElementById('comment-text').value);
+  author = getNumberOrString(document.getElementById('comment-author').value);
+  comments.unshift(comment);
+  checkAuthor();
+
+});
+
+// End Comments Section

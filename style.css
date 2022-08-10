@@ -1,7 +1,7 @@
 :root {
   --overlay: white;
   --overlay-font: "Poppins", sans-serif;
-  --para-font: "Poppins", sans-serif;
+  --para-font: "Space Mono", sans-serif;
   --heading-font: "Space Mono", monospace;
 }
 
@@ -72,7 +72,7 @@ main h2 {
 main p {
   font-family: var(--para-font);
   font-size: 1em;
-  text-align: justify;
+  text-align: center;
 }
 
 /* interests images */
@@ -152,9 +152,10 @@ nav a:hover {
 }
 
 /* CYF Blocks CSS */
-button {
+.quotes-section button {
   margin: 15px;
 }
+
 .quotes-section img {
   width: 500px; 
   height: auto;
