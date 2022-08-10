@@ -149,21 +149,27 @@
         <!-- Comment Section from CYF Blocks -->
           <section class="comment-container">
             <a id="dreams"><h2>Comments Section</h2></a>
-            <div><label for="comment-text">Your Comment:</label>
+            <div class="center-form">
+              <!-- Added onsubmit because my page kept refreshing when I clicked submit! -->
+              <form onsubmit="return false"> 
+                <div>
+                  <textarea id="comment-text" placeholder="Start typing something..."></textarea>
+                </div>
+
+                <div>
+                  <input type="text" id="comment-author" placeholder="Your name" />
+                </div>
+
+                <div>
+                  <button id="comment-button">Leave Comment</button>
+                </div>
+
+                <div class="comment-section">
+                  <ul id="comment-list"></ul>
+                </div>
+              </form>
             </div>
-            <div>
-              <textarea id="comment-text"></textarea>
-            </div>
-            <div>
-              <label for="comment-author"></label>
-              <input type="text" id="comment-author" placeholder="Your name" />
-            </div>
-            <div>
-              <button id="comment-button">Leave Comment</button>
-            </div>
-            <div class="comment-section">
-              <ul id="comment-list"></ul>
-            </div>
+            
           </section>
          <!-- End of Comment Section -->
       </main>

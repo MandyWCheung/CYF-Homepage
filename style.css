@@ -170,3 +170,23 @@ nav a:hover {
   text-align: center;
 }
       
+/* Comments Section */
+#comment-text {
+  height: auto;
+  width: 500px;
+}
+
+.center-form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+ul .comment-list{
+  list-style-type: none;
+}
+
+/* ul div {
+
+} */
