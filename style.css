@@ -3,6 +3,7 @@
   --overlay-font: "Poppins", sans-serif;
   --para-font: "Space Mono", sans-serif;
   --heading-font: "Space Mono", monospace;
+  --accent: #e06566;
 }
 
 body {
@@ -75,6 +76,35 @@ main p {
   text-align: center;
 }
 
+/* about me */
+.strike {
+  text-decoration: line-through;
+}
+
+.about-links a {
+  text-decoration: underline;
+}
+
+.details-container {
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+details {
+  margin: 0 5px;
+  height: auto;
+  width: 400px;
+  font-family: var(--para-font);
+}
+
+details p {
+  text-align: left;
+  margin: 0 20px;
+  font-size: 12px;
+}
+
 /* interests images */
 .hero-section {
   margin: 20px;
@@ -103,20 +133,21 @@ main p {
 
 .video {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 30px auto;
 }
 
 section {
   margin-top: 25px;
 }
 
-.white-rabbit {
+/* .white-rabbit {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
+} */
 
 .styled-break {
   width: 700px;
@@ -143,8 +174,8 @@ a:visited {
   color: black;
 }
 
-nav a:hover {
-  color: #e06566;
+nav a:hover, a.backtotop:hover, .social-icons a:hover, .about-links a:hover {
+  color: var(--accent);
 }
 
 .social-icons i {
@@ -169,24 +200,79 @@ nav a:hover {
 .main {
   text-align: center;
 }
+
+/* why */
+.small-text {
+  font-size: 14px;
+}
+
+.smaller-text {
+  font-size: 12px;
+}
       
 /* Comments Section */
+
+#form-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 #comment-text {
   height: auto;
   width: 500px;
 }
 
-.center-form {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
+form div {
+  margin: 15px 0;
 }
 
-ul .comment-list{
-  list-style-type: none;
+textarea, input {    
+    border-radius: 5px;
+    color: #000000;
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+  }
+
+button {
+    background-color: white;
+    border-radius: 10px;
+    color: #000000;
+    border: 1px solid #dbdbdb;
+    font-family: "Space Mono", sans-serif;
+    font-size: 14px;
+    padding: 3px 5px;
+  }
+  
+button:hover {
+    background-color: white;
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+textarea, input,
+input::placeholder {
+    font-family: var(--para-font);
+    font-size: 14px;
 }
 
-/* ul div {
+textarea:focus, input:focus {
+  outline: 1px solid var(--accent);
+}
 
-} */
+
+/* Break lines */
+.styled-break {
+  height: 1px;
+  background-color: var(--accent);
+  margin: 30px auto;
+}
+
+
+.btt-container {
+  margin: 20px;
+  text-align: right;
+  font-size: 16px;
+}
